@@ -1,12 +1,22 @@
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
-
+let playRound = () => {
 
     //Prompt for player selection 
+    let playerSelection = prompt();
+
     //Make the selection case insensitive
+    playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
+
     //If the player has not entered a valid option, restart round and prompt again
-    //Randomly assign the computers selection.
-        //by generating a number between 1 and 3
-        //and assigning 'rock', 'paper', or 'scissors' as values instead of 1,2 or 3
+    if (playerSelection != "Rock" || playerSelection != "Paper" || playerSelection != "Scissors"){
+        alert("Please input 'Rock', 'Paper', or 'Scissors'");
+        playRound();
+    }
+
+
+    //Randomly assign the computers selection
+    //by generating a number between 1 and 3
+    //and assign 'Rock', 'Paper', or 'Scissors' equivalent to possible numerical results
     //Determine if the player won and console log a string that declares the winner of the round in the format "You Lose! Paper beats Rock."
     //return the result
 
@@ -14,3 +24,4 @@
 //Create a new function called 'game()' which calls the 'playRound' function 5 times,
 //track the score
 //determine and declares a winner, loser, or tie game.
+}
