@@ -35,9 +35,32 @@ let playRound = () => {
 
     }
 
-    
     //Determine if the player won and console log a string that declares the winner of the round in the format "You Lose! Paper beats Rock."
+    let result;
+
+    if (playerSelection === "Rock" && computerSelection === "Scissors" || 
+        playerSelection === "Scissors" && computerSelection === "Paper" ||
+        playerSelection === "Paper" && computerSelection === "Rock"){
+
+        result = "Win";
+        console.log(`You ${result}! ${playerSelection} beats ${computerSelection}.`)
+        
+
+    } else if (playerSelection === computerSelection){
+
+        result = "Tied";
+        console.log(`You ${result}!`)
+
+    } else {
+
+        result = "Lost";
+        console.log(`You ${result}! ${computerSelection} beats ${playerSelection}.`)
+
+    }
+
     //return the result
+    return result;
+
 
 
 //Create a new function called 'game()' which calls the 'playRound' function 5 times,
