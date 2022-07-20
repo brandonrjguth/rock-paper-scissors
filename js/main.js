@@ -8,7 +8,7 @@ let playRound = () => {
     playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
 
     //If the player has not entered a valid option, restart round and prompt again
-    if (playerSelection != "Rock" || playerSelection != "Paper" || playerSelection != "Scissors"){
+    if (playerSelection != "Rock" && playerSelection != "Paper" && playerSelection != "Scissors"){
         alert("Please input 'Rock', 'Paper', or 'Scissors'");
         playRound();
     }
