@@ -1,17 +1,25 @@
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
 let playRound = () => {
 
+    let playerSelection;
+    
     //Prompt for player selection 
-    let playerSelection = prompt();
+    let playerSelectionPrompt = () => {
+    
+        playerSelection = prompt();
 
-    //Make the selection case insensitive
-    playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
+         //Make the selection case insensitive
+        playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
 
-    //If the player has not entered a valid option, restart round and prompt again
-    if (playerSelection != "Rock" && playerSelection != "Paper" && playerSelection != "Scissors"){
-        alert("Please input 'Rock', 'Paper', or 'Scissors'");
-        playRound();
+        //If the player has not entered a valid option, restart round and prompt again
+        if (playerSelection != "Rock" && playerSelection != "Paper" && playerSelection != "Scissors"){
+            alert("Please input 'Rock', 'Paper', or 'Scissors'");
+            playerSelectionPrompt();
+        }
+
     }
+    
+    playerSelectionPrompt();
 
 
     //Randomly assign the computers selection
