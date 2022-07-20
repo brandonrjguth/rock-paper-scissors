@@ -15,8 +15,8 @@ let playRound = () => {
 
 
     //Randomly assign the computers selection
-    //by generating a number between 1 and 3
-    let computerSelection = Math.Floor(Math.random()*3 + 1);
+    //by generating a number between 1 and 3 
+    let computerSelection = Math.floor(Math.random()*3 + 1);
 
     //and assign 'Rock', 'Paper', or 'Scissors' equivalent to possible numerical results
     switch (computerSelection){
