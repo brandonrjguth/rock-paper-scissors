@@ -1,6 +1,8 @@
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
 let playRound = (playerSelection) => {
 
+    //define div for displaying result
+    let resultArea = document.querySelector("#result");
     
     //Randomly assign the computers selection
     //by generating a number between 1 and 3 
@@ -33,7 +35,7 @@ let playRound = (playerSelection) => {
         result = "Win";
 
         console.log(`You ${result}! ${playerSelection} beats ${computerSelection}.`)
-        alert(`You ${result}! ${playerSelection} beats ${computerSelection}.`)
+        resultArea.textContent = `You ${result}! ${playerSelection} beats ${computerSelection}.`
         
         
 
@@ -42,7 +44,7 @@ let playRound = (playerSelection) => {
         result = "Tied";
 
         console.log(`You ${result}!`)
-        alert(`You ${result}!`)
+        resultArea.textContent = `You ${result}!`
         
 
     } else {
@@ -50,7 +52,7 @@ let playRound = (playerSelection) => {
         result = "Lost";
 
         console.log(`You ${result}! ${computerSelection} beats ${playerSelection}.`)
-        alert(`You ${result}! ${computerSelection} beats ${playerSelection}.`)
+        resultArea.textContent = `You ${result}! ${computerSelection} beats ${playerSelection}.`
         
     }
 
