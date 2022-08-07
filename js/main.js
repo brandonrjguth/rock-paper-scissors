@@ -1,27 +1,7 @@
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
-let playRound = () => {
+let playRound = (playerSelection) => {
 
-    let playerSelection;
     
-    //Prompt for player selection 
-    let playerSelectionPrompt = () => {
-    
-        playerSelection = prompt("Please choose 'Rock', 'Paper', or 'Scissors'");
-
-         //Make the selection case insensitive
-        playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
-
-        //If the player has not entered a valid option, restart round and prompt again
-        if (playerSelection != "Rock" && playerSelection != "Paper" && playerSelection != "Scissors"){
-            alert("Please input 'Rock', 'Paper', or 'Scissors'");
-            playerSelectionPrompt();
-        }
-
-    }
-    
-    playerSelectionPrompt();
-
-
     //Randomly assign the computers selection
     //by generating a number between 1 and 3 
     let computerSelection = Math.floor(Math.random()*3 + 1);
@@ -80,47 +60,18 @@ let playRound = () => {
 
 
 
+//Event Listeners for buttons
 
-//Create a new function called 'game()' which calls the 'playRound' function 5 times,
-let game = () => {
+let rps = document.querySelectorAll(".rps");
 
-    let playerTotalScore = 0;
-    let computerTotalScore = 0;
-
-    for (i=0; i<5; i++){
-
-        let result = playRound();
-
-        //track the score
-        if (result === "Win"){
-            playerTotalScore++;
-        }
-
-        else if (result === "Lost"){
-            computerTotalScore++;
-        }
-    }
-
-    //Determine winner out of 5
-    let finalResult;
-
-    if (playerTotalScore > computerTotalScore){
-
-        finalResult = "Won";
-
-    } else if (playerTotalScore < computerTotalScore){
-
-       finalResult = "Lost";
-        
-    } else {
-
-        finalResult = "Tied";
-
-    }
-
-    console.log(`Your score is ${playerTotalScore}. The computers score is ${computerTotalScore}. You ${finalResult}!`)
-    alert(`Your score is ${playerTotalScore}. The computers score is ${computerTotalScore}. You ${finalResult}!`)
+rps.forEach(x => {
     
+    let id = x.id;
 
-}
+    console.log(id);
+    x.addEventListener("click", () => playRound(id))
+
+})
+
+
 
