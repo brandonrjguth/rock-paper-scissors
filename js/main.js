@@ -6,12 +6,20 @@ let computerScore = 0;
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
 let playRound = (playerSelection) => {
 
+    console.log("function ran " + userScore)
+
     //define nodes for displaying results
     let currentRound = document.querySelector("#currentRound");
     let runningScore = document.querySelector("#runningScore");
     let endScore = document.querySelector("#endScore");
-    let win;
+    let finalResult;
     
+    
+    //if starting another round after someone has reached the final score of 5, remove endScore text
+    if (userScore == 0 && computerScore == 0){
+        endScore.innerText = "";
+    }
+
     //Randomly assign the computers selection
     //by generating a number between 1 and 3 
     let computerSelection = Math.floor(Math.random()*3 + 1);
@@ -65,7 +73,7 @@ let playRound = (playerSelection) => {
     //If either player reaches a score of 5, display winner in endScore and clear score.
     if (userScore == 5 || computerScore == 5){
 
-        if (userScore >=5){
+        if (userScore == 5){
             finalResult = "Won"
         } else {
             finalResult = "Lost"
@@ -73,9 +81,10 @@ let playRound = (playerSelection) => {
 
         userScore = 0;
         computerScore = 0;
+        endScore.innerText = `Game complete, You ${finalResult}!`
     }
 
-    endScore.innerText = `You ${finalResult}!`
+    
 
     //return the result
     return result;
