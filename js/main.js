@@ -6,9 +6,11 @@ let computerScore = 0;
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
 let playRound = (playerSelection) => {
 
-    //define div for displaying result
+    //define nodes for displaying results
     let currentRound = document.querySelector("#currentRound");
     let runningScore = document.querySelector("#runningScore");
+    let endScore = document.querySelector("#endScore");
+    let win;
     
     //Randomly assign the computers selection
     //by generating a number between 1 and 3 
@@ -31,7 +33,7 @@ let playRound = (playerSelection) => {
 
     }
 
-    //Determine if the player won and console log a string that declares the winner of the round in the format "You Lose! Paper beats Rock."
+    //Determine if the player won and change the result nodes to reflect
     let result;
 
     if (playerSelection === "Rock" && computerSelection === "Scissors" || 
@@ -59,6 +61,22 @@ let playRound = (playerSelection) => {
 
     runningScore.innerText = `Your score is ${userScore}. The computer's score is ${computerScore}`;
 
+
+    //If either player reaches a score of 5, display winner in endScore and clear score.
+    if (userScore == 5 || computerScore == 5){
+
+        if (userScore >=5){
+            finalResult = "Won"
+        } else {
+            finalResult = "Lost"
+        }
+
+        userScore = 0;
+        computerScore = 0;
+    }
+
+    endScore.innerText = `You ${finalResult}!`
+
     //return the result
     return result;
 }
@@ -79,5 +97,4 @@ rps.forEach(x => {
 })
 
 
-runningScore.innerText
 
