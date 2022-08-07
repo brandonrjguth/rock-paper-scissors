@@ -1,8 +1,13 @@
+let userScore = 0;
+let computerScore = 0;
+
+
+
 //Write a function called 'playRound()' that will play a single round of 'Rock Paper Scissors'.
 let playRound = (playerSelection) => {
 
     //define div for displaying result
-    let resultArea = document.querySelector("#result");
+    let currentRound = document.querySelector("#currentRound");
     
     //Randomly assign the computers selection
     //by generating a number between 1 and 3 
@@ -35,26 +40,34 @@ let playRound = (playerSelection) => {
         result = "Win";
 
         console.log(`You ${result}! ${playerSelection} beats ${computerSelection}.`)
-        resultArea.textContent = `You ${result}! ${playerSelection} beats ${computerSelection}.`
+        userScore++;
+        currentRound.textContent = `You ${result}! ${playerSelection} beats ${computerSelection}.`
+
         
         
 
     } else if (playerSelection === computerSelection){
 
         result = "Tied";
-
         console.log(`You ${result}!`)
-        resultArea.textContent = `You ${result}!`
+        currentRound.textContent = `You ${result}!`
         
 
     } else {
 
         result = "Lost";
-
         console.log(`You ${result}! ${computerSelection} beats ${playerSelection}.`)
-        resultArea.textContent = `You ${result}! ${computerSelection} beats ${playerSelection}.`
+        computerScore++;
+        currentRound.textContent = `You ${result}! ${computerSelection} beats ${playerSelection}.`
         
     }
+
+
+    let runningScore = document.querySelector("#runningScore");
+    console.log(runningScore);
+    runningScore.innerText = `Your score is ${userScore}. The computer's score is ${computerScore}`;
+
+
 
     //return the result
     return result;
@@ -76,4 +89,5 @@ rps.forEach(x => {
 })
 
 
+runningScore.innerText
 
