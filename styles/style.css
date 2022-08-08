@@ -38,6 +38,11 @@ body{
     padding: 40px 40px;
 }
 
+.rps:hover{
+    background-color: #93BEDF;
+    transform: scale(1.12);
+}
+
 .rps{
     height:250px;
     width:250px;
