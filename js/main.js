@@ -53,23 +53,23 @@ let playRound = (playerSelection) => {
         playerSelection === "Scissors" && computerSelection === "Paper" ||
         playerSelection === "Paper" && computerSelection === "Rock"){
 
-        result = "Win";
+        result = "win";
 
         userScore++;
         
-        currentRound.textContent = `You ${result}! ${playerSelection} beats ${computerSelection}.`
+        currentRound.textContent = `You ${result} this round! ${playerSelection} beats ${computerSelection}.`
 
         
     } else if (playerSelection === computerSelection){
 
-        result = "Tied";
-        currentRound.textContent = `You ${result}!`
+        result = "tied";
+        currentRound.textContent = `You ${result} this round!`
         
     } else {
 
-        result = "Lost";
+        result = "lost";
         computerScore++;
-        currentRound.textContent = `You ${result}! ${computerSelection} beats ${playerSelection}.`
+        currentRound.textContent = `You ${result} this round! ${computerSelection} beats ${playerSelection}.`
         
     }
 
