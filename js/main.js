@@ -12,7 +12,11 @@ let playRound = (playerSelection) => {
     let currentRound = document.querySelector("#currentRound");
     let runningScore = document.querySelector("#runningScore");
     let endScore = document.querySelector("#endScore");
+    let intructions = document.querySelector("#instructions");
     let finalResult;
+
+    //remove instructions
+    instructions.textContent = "";
     
     
     //if starting another round after someone has reached the final score of 5, remove endScore text
