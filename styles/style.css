@@ -21,7 +21,7 @@ body{
 }
 
 .content{
-    background-color: #3d3d3d;
+    background-color: #8390e9;
     flex-grow: 1;
     display:flex;
     flex-direction: column;
@@ -41,11 +41,11 @@ body{
 .rps{
     height:250px;
     width:250px;
-    background-color: #ffffff;
+    background-color: #f8f9fe;
 }
 
 .rps:hover{
-    background-color: #93BEDF;
+    background-color: #f1ebfb;
     transform: scale(1.12);
 }
 
