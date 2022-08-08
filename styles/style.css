@@ -29,6 +29,15 @@ body{
     padding:70px 20px;
 }
 
+.rpsRow{
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    padding: 40px 40px;
+}
+
 h1{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 50px;
