@@ -38,15 +38,27 @@ body{
     padding: 40px 40px;
 }
 
+.rps{
+    height:250px;
+    width:250px;
+    background-color: #ffffff;
+}
+
 .rps:hover{
     background-color: #93BEDF;
     transform: scale(1.12);
 }
 
-.rps{
-    height:250px;
-    width:250px;
-    background-color: #ffffff;
+#result{
+    height: 200px;
+    width: 700px;
+    background-color: #242424;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0.8px 0.4px 1.2px rgb(0 0 0 / 7%), 1.9px 1.1px 2.9px rgb(0 0 0 / 9%), 3.5px 2px 5.4px rgb(0 0 0 / 12%), 6.3px 3.6px 9.6px rgb(0 0 0 / 14%), 11.7px 6.7px 18px rgb(0 0 0 / 17%), 28px 16px 43px rgb(0 0 0 / 23%);
+    border-radius: 20px;
 }
 
 h1{
