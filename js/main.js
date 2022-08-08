@@ -81,6 +81,7 @@ let playRound = (playerSelection) => {
 
         userScore = 0;
         computerScore = 0;
+        currentRound.textContent = "";
         endScore.innerText = `Game complete, You ${finalResult}!`
     }
 
