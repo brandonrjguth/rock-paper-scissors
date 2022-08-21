@@ -86,3 +86,30 @@ p {
 .hidden{
     display:none;
 }
+
+.footer{
+    font-family: 'Josefin Sans', sans-serif;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #131313;
+    color:white;
+    padding:0.75rem;
+}
+
+.github{
+    text-decoration: none;
+    color: white;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.github:hover{
+    color:#bbbff0;
+}
+
+#githubLogo{
+    height:1rem;
+    width:1rem;
+}
