@@ -44,7 +44,7 @@ p {
     flex-grow: 1;
     align-items: center;
     padding:2rem 1rem;
-    background-color: #8390e9;
+    background-color: #ffe94e;
 }
 
 .footer{
@@ -85,7 +85,6 @@ h1{
 
 .rps:hover{
     transform: scale(1.12);
-    background-color: #c7ffd5;
 }
 
 #result{
